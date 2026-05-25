@@ -43,10 +43,14 @@
     production system serving <strong>13.5M companies, 23M decision-makers,
     1000 RPS sustained</strong>.</p>
     <ul>
-      <li>Designed microservices architecture: <code>backend (Symfony)</code> +
-        <code>client-api (Laravel)</code> + <code>parser</code> +
-        <code>finance-docs-parser</code> + <code>backoffice</code> +
-        <code>Next.js frontend</code>, gRPC between services</li>
+      <li>Designed microservices architecture:
+        <code>backend (Symfony)</code> +
+        <code>client-api (Laravel)</code> +
+        <code>parser (async PHP on AmPHP, with OpenAI integration)</code> +
+        <code>finance-docs-parser (Python — XBRL + OCR + LLM document pipeline)</code> +
+        <code>backoffice</code> +
+        <code>Next.js frontend</code>.
+        <strong>RabbitMQ + gRPC</strong> for inter-service communication</li>
       <li>Storage stack under load: PostgreSQL master/slave + pgbouncer,
         ClickHouse for analytics, OpenSearch index over 13.5M companies
         with ownership graphs and 16 years of financial data</li>
@@ -174,12 +178,21 @@
     </div>
 
     <h3>AI/ML team management at Bringo BCU</h3>
-    <p>2 AI Engineers and 2 ML Data Scientists report to me. Product AI
+    <p>2 AI Engineers and 2 ML Data Scientists report to me. Production AI
     features under my direction:</p>
     <ul>
-      <li>Document understanding pipeline for financial reports (machine XBRL
-        through to low-quality scanned PDFs)</li>
-      <li>LLM-powered product features</li>
+      <li><strong>Document understanding pipeline</strong>
+        (<code>finance-docs-parser</code>, Python 3.10) — multi-stage
+        processing of UK financial reports from machine-readable XBRL
+        (<code>ixbrl-parse</code>, <code>lxml</code>, <code>rdflib</code>)
+        through PDF (<code>PyMuPDF</code>, <code>pdf2image</code>) to
+        low-quality scans (<code>Tesseract OCR</code> + <code>OpenCV</code>),
+        with <code>OpenAI API</code> for semantic enrichment</li>
+      <li>Architecture: 10 internal stages — <em>entry / generator / parser /
+        matcher / transformer / recalculator / shareholder / report</em> —
+        coordinated via RabbitMQ, persisted to ClickHouse + PostgreSQL + S3</li>
+      <li>LLM-powered product features in <code>parser</code> service
+        (async PHP on AmPHP + OpenAI)</li>
       <li>Audience analytics and marketing hypothesis testing via AI</li>
     </ul>
   </section>
