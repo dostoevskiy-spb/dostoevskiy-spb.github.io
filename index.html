@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavel Lamzin — Tech Lead · AI Engineer</title>
+  <meta name="description" content="Tech Lead / TeamLead / Senior PHP Developer with 17 years backend (HighLoad, distributed systems, async PHP, telecom). Last 2 years building production AI tooling — MCP servers and Claude Code skills.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pavel Lamzin</h1>
+    <p class="subtitle">Tech Lead · AI Engineer · Saint Petersburg · Remote</p>
+    <nav>
+      <a href="#backend">Backend &amp; Leadership</a>
+      <a href="#ai">AI Tooling</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>17 years in production backend · 2 years building AI agents</h2>
+    <p>I run a 19-person engineering team at <strong>Bringo BCU</strong> —
+    a UK B2B intelligence platform with 13.5M companies, 23M decision-makers,
+    and 1000 RPS sustained on complex OpenSearch queries. Before that, I
+    co-architected a carrier-grade async PHP SMS-routing platform serving
+    BelTelecom (Belarus national telco) and several regional mobile operators.</p>
+    <p>In parallel, I build my own <strong>~50 MCP servers</strong> and
+    <strong>60+ Claude Code skills</strong> that power my PPC consulting
+    business and personal knowledge workflows. AI/ML team at work reports
+    to me directly.</p>
+    <p class="meta">Open to: Tech Lead / TeamLead / Senior PHP / AI Engineer /
+    LLM Engineer — full-time remote from Russia.</p>
+  </section>
+
+  <section id="backend">
+    <h2>Backend &amp; Leadership (17 years)</h2>
+
+    <h3>Bringo Group LTD · bringo.co.uk · TechLead + TeamLead (Dec 2022 — present)</h3>
+    <p>Founding engineer of a B2B business intelligence platform. Started solo
+    with a Symfony prototype on the UK Companies House API, scaled to a
+    production system serving <strong>13.5M companies, 23M decision-makers,
+    1000 RPS sustained</strong>.</p>
+    <ul>
+      <li>Designed microservices architecture: <code>backend (Symfony)</code> +
+        <code>client-api (Laravel)</code> + <code>parser</code> +
+        <code>finance-docs-parser</code> + <code>backoffice</code> +
+        <code>Next.js frontend</code>, gRPC between services</li>
+      <li>Storage stack under load: PostgreSQL master/slave + pgbouncer,
+        ClickHouse for analytics, OpenSearch index over 13.5M companies
+        with ownership graphs and 16 years of financial data</li>
+      <li>Stripe billing: trial / daily / monthly / yearly subscription models</li>
+      <li>Grew team from 1 to 19 people (5 BE + 3 FE + 2 AI Eng + 2 ML DS +
+        2 DevOps + 2 QA + 1 BA + 1 Designer + 1 PM); ran <strong>200+
+        interviews</strong>; built hiring, onboarding, code-review, and
+        release processes from scratch</li>
+      <li>Crisis-managed the project through a financial downturn when BCU
+        was funded by SMPP-side revenue; kept the team and pace intact</li>
+    </ul>
+
+    <h3>Bringo Group LTD · bringo.com (SMPP) · Senior Software Engineer (Dec 2021 — Dec 2022)</h3>
+    <p>Co-architected an <strong>async PHP carrier-grade SMS-routing platform</strong>
+    with a team of 7 senior engineers. Shipped from scratch in 1 year.</p>
+    <ul>
+      <li>Low-level SMPP stack — byte-level SMSC/ESME packing, routing,
+        firewall under heavy concurrency; hunted race conditions and memory
+        leaks in long-running async workers</li>
+      <li>Multi-DC HA: 3 data centers, PostgreSQL logical replication,
+        ClickHouse for traffic analytics, Redis cache</li>
+      <li>Dual bus architecture: <strong>Kafka</strong> for high-throughput
+        SMS traffic, <strong>RabbitMQ</strong> for transactional queues</li>
+      <li>Multi-tenant production deployments: <strong>BelTelecom (Belarus
+        national telco)</strong>, several regional mobile operators,
+        and Bringo's internal SMS-reselling business</li>
+      <li>Each client = a distributed cluster of installations; sold as
+        boxed enterprise solution with recurring support contracts</li>
+    </ul>
+
+    <h3>Earlier roles (selected)</h3>
+    <ul>
+      <li><strong>International native ad platform (NDA, 2020-2021)</strong> —
+        TechLead of 6-person backend team. Full DDD on Symfony, ClickHouse
+        analytics for traffic and performance.</li>
+      <li><strong>СмсКапитал (2015-2018)</strong> — TeamLead on VAS billing
+        for МТС / Билайн / МегаФон / Tele2; squeezed ~100k RPS out of PHP
+        on a 12-core VM under Yandex Tank load; cut latency from 1-2s to
+        50ms. <strong>Same telco / SMPP / Kannel domain as Bringo SMPP</strong> —
+        7+ years of continuous telecom expertise.</li>
+      <li>Earlier: <strong>Узнать Штрафы.ру</strong> (2019-2020),
+        <strong>studentsonline.ru indie</strong> (2019),
+        <strong>Viboom / Appboom</strong> (2014-2015, Senior / TeamLead),
+        <strong>Mota-systems</strong> (2010-2014, banking + CRM).</li>
+    </ul>
+  </section>
+
+  <section id="ai">
+    <h2>AI Tooling (parallel to full-time, last 2 years)</h2>
+
+    <h3>~50 MCP servers in active use</h3>
+    <p>Production-ready integrations across multiple domains:</p>
+
+    <div class="grid">
+      <div>
+        <h3>Yandex stack</h3>
+        <ul>
+          <li>Yandex Direct API v5</li>
+          <li>Yandex Metrika</li>
+          <li>Yandex Webmaster</li>
+          <li>Yandex Wordstat</li>
+          <li>Yandex SpeechKit</li>
+          <li>Yandex Maps</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Google stack</h3>
+        <ul>
+          <li>Google Search Console</li>
+          <li>Google Analytics 4</li>
+          <li>Google Drive</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Russian government &amp; finance</h3>
+        <ul>
+          <li>ФНС (mco.nalog.ru) — reverse-engineered</li>
+          <li>CheckO (ЕГРЮЛ / ЕГРИП)</li>
+          <li>DaData (company enrichment)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Infrastructure &amp; security</h3>
+        <ul>
+          <li>AbuseIPDB</li>
+          <li>IPGeolocation</li>
+          <li>Cloudflare API</li>
+          <li>MTS Autosecretary</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>60+ active Claude Code skills</h3>
+    <p>Private marketplace <code>dostoevskiy-skills</code>, 100+ total with
+    archived. Domains:</p>
+
+    <div class="grid">
+      <div>
+        <h3>PPC Consulting (ppc-agency)</h3>
+        <p>~25 skills: weekly audits, cabinet changes monitoring, intraday
+        watch, frequency methodology, agency quality audits, evidence matrix,
+        GSC audits, mediaplan sync, lead reconciliation.</p>
+      </div>
+
+      <div>
+        <h3>Spending Analyzer</h3>
+        <p>~10 skills: monthly deep dives, weekly analysis, quarterly reviews,
+        yearly summaries, transaction-email matching, categorization.</p>
+      </div>
+
+      <div>
+        <h3>Vault Knowledge Management</h3>
+        <p>~10 skills: daily notes, weekly reviews, MOC generation, atomic
+        Zettelkasten capture, vault health audits, knowledge consolidation.</p>
+      </div>
+
+      <div>
+        <h3>Dev &amp; Productivity</h3>
+        <p>Session log protocols, email triage, FNS receipts processing,
+        Obsidian CLI integrations, metadata collection across projects.</p>
+      </div>
+    </div>
+
+    <h3>AI/ML team management at Bringo BCU</h3>
+    <p>2 AI Engineers and 2 ML Data Scientists report to me. Product AI
+    features under my direction:</p>
+    <ul>
+      <li>Document understanding pipeline for financial reports (machine XBRL
+        through to low-quality scanned PDFs)</li>
+      <li>LLM-powered product features</li>
+      <li>Audience analytics and marketing hypothesis testing via AI</li>
+    </ul>
+  </section>
+
+  <section id="stack">
+    <h2>Stack &amp; Methodology</h2>
+
+    <p><strong>AI / LLM:</strong> Claude API · Anthropic SDK · MCP protocol ·
+    FastMCP · Claude Agent SDK · prompt caching · agent orchestration · RAG ·
+    document understanding</p>
+    <p><strong>Languages:</strong> Python · TypeScript · PHP 8 · Bash</p>
+    <p><strong>Backend frameworks:</strong> Symfony · Laravel · Yii2 · Phalcon ·
+    AmPHP (async PHP) · FastAPI</p>
+    <p><strong>Data:</strong> PostgreSQL (logical replication) · ClickHouse ·
+    OpenSearch · MySQL · MongoDB · Redis</p>
+    <p><strong>Messaging:</strong> Apache Kafka · RabbitMQ · SMPP · gRPC</p>
+    <p><strong>Infrastructure:</strong> Kubernetes (Helmfile) · Docker ·
+    GitLab CI/CD · Linux · Nginx</p>
+    <p><strong>Architecture:</strong> Microservices · Event-driven · Distributed
+    systems · HighLoad · Multi-DC HA · DDD</p>
+
+    <h3>Methodology: Digital Growth Master Framework (DGMF)</h3>
+    <p>Own evidence-driven framework for PPC consulting. Atomic cards:
+    <strong>HYP</strong> (hypotheses) → <strong>DEC</strong> (decisions) →
+    <strong>MX</strong> (matrix evidence) → <strong>LO</strong> (lessons
+    observed) → <strong>F</strong> (final outcomes). Used in real client
+    engagements: AZT (greenhouses), MVT (transfers), Tehnopragmat (B2B
+    telematics).</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:dostoevskiy.spb@gmail.com">dostoevskiy.spb@gmail.com</a>
+      ·
+      Telegram <a href="https://t.me/pl_software">@pl_software</a>
+      ·
+      <a href="https://github.com/dostoevskiy-spb">GitHub</a>
+    </p>
+    <p class="meta">Open to: Tech Lead / TeamLead / Senior PHP Developer /
+    AI Engineer / LLM Engineer — full-time remote from Russia.</p>
+  </section>
+
+  <footer>
+    <p>Last updated: 2026-05-25 · Source code of private marketplace not public</p>
+  </footer>
+</body>
+</html>
